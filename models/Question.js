@@ -5,6 +5,10 @@ const { Schema } = mongoose;
 // schema
 const questionSchema = new Schema(
   {
+    type: {
+      type: String,
+      default: "N/A",
+    },
     question: {
       type: String,
       required: true,
