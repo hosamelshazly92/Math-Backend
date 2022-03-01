@@ -13,8 +13,12 @@ const questionSchema = new Schema(
       type: String,
       required: true,
     },
-    answers: {
+    choices: {
       type: Array,
+      required: true,
+    },
+    answer: {
+      type: String,
       required: true,
     },
   },

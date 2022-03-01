@@ -5,7 +5,6 @@ const questionsSeeds = require("../seeds");
 // get
 module.exports.getQuestions = async (req, res) => {
   const questions = await Question.find().sort({ createdAt: -1 });
-
   res.json({
     success: true,
     count: `${questions.length} question(s)`,
@@ -15,7 +14,7 @@ module.exports.getQuestions = async (req, res) => {
 
 // post
 module.exports.addQuestions = async (req, res) => {
-  if (false) {
+  if (true) {
     const questions = await Question.insertMany(questionsSeeds);
     res.json({
       success: true,
@@ -44,7 +43,7 @@ module.exports.editQuestions = async (req, res) => {
 // remove
 module.exports.removeQuestions = async (req, res) => {
   try {
-    if (false) {
+    if (true) {
       const questions = await Question.find();
       await Question.deleteMany();
       res.json({

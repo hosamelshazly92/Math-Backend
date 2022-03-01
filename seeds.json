@@ -2,6 +2,18 @@
   {
     "type": "algebra",
     "question": "Solve x + 2 = 6",
-    "answers": ["x = 3", "x = 4", "x = 6", "x = 8"]
+    "choices": ["x = 3", "x = 4", "x = 6", "x = 8"],
+    "answer": "x = 4"
+  },
+  {
+    "type": "data",
+    "question": "Which one of the following is quantitative data?",
+    "choices": [
+      "She is black and white.",
+      "She has two ears.",
+      "She has long hair.",
+      "She has a long tail."
+    ],
+    "answer": "She has two ears."
   }
 ]
