@@ -22,7 +22,6 @@ module.exports.addQuestions = async (req, res) => {
     });
   } else {
     const question = new Question(req.body);
-    console.log(question);
     await question.save();
     res.json({ success: true, message: "add success!" });
   }

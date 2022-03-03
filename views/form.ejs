@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Math Form</title>
+  </head>
+  <body>
+    <form class="form-container" action="/form" method="POST">
+      <div class="form-header">
+        <h1 class="form-header-title">Add Questions!</h1>
+      </div>
+      <div class="form-body">
+        <div class="form-row">
+          <label class="form-label" for="type">Type</label>
+          <input
+            class="form-input"
+            id="type"
+            type="text"
+            placeholder="(required)"
+            name="type"
+          />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="question">Question</label>
+          <input
+            class="form-input"
+            id="question"
+            type="text"
+            placeholder="(required)"
+            name="question"
+          />
+        </div>
+        <div class="form-choices">
+          <p class="form-label">Choices</p>
+          <div class="form-choice">
+            <label class="form-label" for="first">Answer 1</label>
+            <input
+              class="form-input"
+              id="first"
+              type="text"
+              placeholder="(required)"
+              name="first"
+            />
+          </div>
+          <div class="form-choice">
+            <label class="form-label" for="second">Answer 2</label>
+            <input
+              class="form-input"
+              id="second"
+              type="text"
+              placeholder="(required)"
+              name="second"
+            />
+          </div>
+          <div class="form-choice">
+            <label class="form-label" for="third">Answer 3</label>
+            <input
+              class="form-input"
+              id="third"
+              type="text"
+              placeholder="(required)"
+              name="third"
+            />
+          </div>
+          <div class="form-choice">
+            <label class="form-label" for="fourth">Answer 4</label>
+            <input
+              class="form-input"
+              id="fourth"
+              type="text"
+              placeholder="(required)"
+              name="fourth"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="answer">Answer</label>
+          <input
+            class="form-input"
+            id="answer"
+            type="text"
+            placeholder="(required)"
+            name="answer"
+          />
+        </div>
+      </div>
+      <div class="form-footer">
+        <button class="btn">Submit</button>
+      </div>
+    </form>
+    <div class="container">
+      <button id="reset" class="btn reset">Reset</button>
+    </div>
+
+    <script src="js/form.js" type="text/javascript"></script>
+  </body>
+</html>

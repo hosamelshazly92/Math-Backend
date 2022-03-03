@@ -1,10 +1,12 @@
 // modules
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // imports
-const questionsRoutes = require("./routes/questions");
 const { logger, domain } = require("./middlewares");
+const questionsRoutes = require("./routes/questions");
+const formRoutes = require("./routes/form");
 
 // env
 require("dotenv").config();
@@ -30,9 +32,15 @@ DB.once("open", () => {
 app.use(logger);
 app.use(domain);
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// ejs template
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
 // routes
 app.use("/questions", questionsRoutes);
+app.use("/form", formRoutes);
 
 // listen
 app.listen(PORT, () => {
